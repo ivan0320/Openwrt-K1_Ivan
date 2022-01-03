@@ -20,6 +20,7 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Ma
 # 修改mt7620 固件配置文件
 # psg1208 修改为16M内存
  mv $GITHUB_WORKSPACE/images/mt7620.mk target/linux/ramips/image/mt7620.mk
+ mv $GITHUB_WORKSPACE/images/mt7620a_phicomm_psg1208.dts target/linux/ramips/dts/mt7620a_phicomm_psg1208.dts
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_generate
