@@ -12,16 +12,7 @@
 
 # Uncomment a feed source
 sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-# 删除自定义源默认的 argon 主题
-rm -rf package/lean/luci-theme-argon
-# 拉取 argon 原作者的源码
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
-# 替换默认主题为 luci-theme-argon
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/' openwrt/feeds/luci/collections/luci/Makefile
 
-# 修改mt7620 固件配置文件
-# psg1208 修改为16M内存
- mv $GITHUB_WORKSPACE/images/mt7620.mk openwrt/target/linux/ramips/image/mt7620.mk
 
 # Add a feed source
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
