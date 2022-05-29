@@ -24,5 +24,10 @@
 sed -i 's/0x7b0000/0xfb0000/g' target/linux/ramips/dts/mt7620a_phicomm_psg1218a.dts
 
 
+#修改wifi信息
+sed -i 's/OpenWrt/HOME/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed -i 's/none/*123qweASD*/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+
+
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_generate
