@@ -18,9 +18,11 @@
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
 
 # 修改mt7620 固件配置文件
-# psg1218 修改为16M内存
 # mv $GITHUB_WORKSPACE/images/mt7620.mk target/linux/ramips/image/mt7620.mk
+# psg1218 修改启用USB
 mv $GITHUB_WORKSPACE/images/openwrt_mt7620a_phicomm_k2x.dtsi target/linux/ramips/dts/openwrt_mt7620a_phicomm_k2x.dtsi
+# psg1218 修改为16M内存
+mv $GITHUB_WORKSPACE/images/openwrt_mt7620a_phicomm_psg1218a.dts target/linux/ramips/dts/openwrt_mt7620a_phicomm_psg1218a.dts
 # sed -i 's/0x7b0000/0xfb0000/g' target/linux/ramips/dts/mt7620a_phicomm_psg1218a.dts
 
 
