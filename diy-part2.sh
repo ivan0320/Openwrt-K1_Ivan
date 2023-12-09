@@ -25,6 +25,8 @@ mv $GITHUB_WORKSPACE/images/openwrt_mt7620a_phicomm_k2x.dtsi target/linux/ramips
 mv $GITHUB_WORKSPACE/images/openwrt_mt7620a_phicomm_psg1218a.dts target/linux/ramips/dts/mt7620a_phicomm_psg1218a.dts
 # sed -i 's/0x7b0000/0xfb0000/g' target/linux/ramips/dts/mt7620a_phicomm_psg1218a.dts
 
+#删除默认密码
+sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
 
 #修改wifi信息
 sed -i 's/OpenWrt/HOME/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
