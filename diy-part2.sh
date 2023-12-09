@@ -20,7 +20,7 @@
 # 修改mt7620 固件配置文件
 # psg1218 修改为16M内存
 # mv $GITHUB_WORKSPACE/images/mt7620.mk target/linux/ramips/image/mt7620.mk
-# mv $GITHUB_WORKSPACE/images/mt7620a_phicomm_psg1208.dts target/linux/ramips/dts/mt7620a_phicomm_psg1208.dts
+mv $GITHUB_WORKSPACE/images/openwrt_mt7620a_phicomm_k2x.dtsi target/linux/ramips/dts/openwrt_mt7620a_phicomm_k2x.dtsi
 # sed -i 's/0x7b0000/0xfb0000/g' target/linux/ramips/dts/mt7620a_phicomm_psg1218a.dts
 
 
